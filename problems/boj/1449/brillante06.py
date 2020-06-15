@@ -1,12 +1,12 @@
 from sys import stdin
-# 1543
-strVal = input()
-findVal = input()
-i, start, res = 0, 0, 0
-while i <= len(strVal)-len(findVal):
-    if strVal[i:i+len(findVal)] == findVal:
-        res += 1
-        i += len(findVal)
-    else:
-        i += 1
-print(res)
+# 1449
+n, l = map(int, (input().split()))
+cnt = 1
+hole = list(map(int, input().split()))
+hole.sort()
+minVal = hole[0]
+for i in range(1, n):
+    if (hole[i]-minVal)+1 > l:
+        minVal = hole[i]
+        cnt += 1
+print(cnt)
