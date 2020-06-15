@@ -1,4 +1,5 @@
 from sys import stdin
+# 1543
 strVal = input()
 findVal = input()
 i, start, res = 0, 0, 0
