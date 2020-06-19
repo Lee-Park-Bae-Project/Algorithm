@@ -28,23 +28,22 @@ int main(void) {
     return 0;
   }
 
-  int cnt = 0;
+  int cnt = 0, i, j;
   while (1) {
     if (cnt >= m) {
       // 전체 다 옮겼으면 그만둠
       break;
     }
-    int i = 0;
-    int j = 0;
+    i = 0;
+    j = 0;
 
     while (i < n && j < m) {
-      if (a[i] >= b[j]) {
-        // i 번째 크레인이 j 번쨰 화물 옮길 수 있는 경우
-        i++;  // 다음 크레인
-        j++;  // 다음 화물
+      if (a[i] >= b[j] && b[j] > 0) {
+        b[j] = -1;
+        i++;
+        j++;
         cnt++;
       } else {
-        // 못 옮기면 다음 화물 확인
         j++;
       }
     }
