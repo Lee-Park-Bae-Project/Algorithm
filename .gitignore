@@ -40,3 +40,5 @@
 *.txt
 **/.DS_Store
 **/*.dSYM
+
+**/*.md
