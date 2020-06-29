@@ -3,7 +3,7 @@ homes = []
 for i in range(n):
     homes.append(int(input()))
 homes.sort()
-minGap = homes[1]-homes[0]
+minGap = 1
 maxGap = homes[-1]-homes[0]
 ans = 0
 if m < 3:
