@@ -24,10 +24,10 @@ def findParent(parent, a, b):
 
 def solution(n, costs):
     answer = 0
-    nodes = sorted(costs, key=lambda item: item[2])
+    edges = sorted(costs, key=lambda item: item[2])
     parents = [i for i in range(n)]
-    for node in nodes:
-        a, b, cost = tuple(node)
+    for edge in edges:
+        a, b, cost = tuple(edge)
         if findParent(parents, a, b) == False:
             unionParent(parents, a, b)
             answer += cost
